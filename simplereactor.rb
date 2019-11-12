@@ -29,12 +29,12 @@ class SimpleReactor
     end
 
     def add_timer time, *args, &block
-      time = case time
-      when Time
-        Time.to_i
-      else
-        Time.now + time.to_i
-      end
+      time =  case time
+              when Time
+                Time.to_i
+              else
+                Time.now + time.to_i
+              end
       
       self[time] = [block, args] if block
     end
@@ -108,6 +108,7 @@ class SimpleReactor
   def run
     @running = true
 
+    ## SimpleReactor.run |reactor|
     yield self if block_given?
 
     tick while @running

@@ -1,4 +1,4 @@
-require './simplereactor'
+require_relative 'simplereactor'
 require 'socket'
 
 server = TCPServer.new("0.0.0.0", 9949)

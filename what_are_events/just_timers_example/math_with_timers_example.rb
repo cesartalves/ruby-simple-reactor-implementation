@@ -1,4 +1,4 @@
-require 'simplereactor'
+require_relative 'simplereactor'
 
 puts <<ETXT
 This demo will add a sequence of numbers to a sum, via a timer, once a second,
